@@ -1,0 +1,6 @@
+[submodule "src/ros-sugar"]
+	path = src/ros-sugar
+	url = https://github.com/limshoonkit/ros-sugar
+[submodule "src/ros-agents"]
+	path = src/ros-agents
+	url = https://github.com/limshoonkit/ros-agents
