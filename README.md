@@ -1,6 +1,15 @@
-# ros2-agent-ws
+# ros2-px4-agent-ws
 
+## Get started
 
+1. Get [isaacsim](https://docs.isaacsim.omniverse.nvidia.com/4.5.0/installation/download.html) and the asset packs to populate your scene.
+2. Get the [px4 extension plugin](https://github.com/limshoonkit/uosm.isaac.px4_bridge)
+3. Get dependencies for [ros-agents](src/ros-agents/README.md)
+
+```
+git clone --recursive https://github.com/limshoonkit/ros2-agent-ws.git
+# git submodule update --init --recursive
+```
 
 ## To build
 ```
@@ -43,4 +52,4 @@ Network delays can cause image transmission to the VLM to lag, potentially leadi
 If you're experiencing low frame rates for scene rendering or image publishing, try disabling colliders in the scene. The VLM only requires the visual mesh, so colliders are unnecessary for its operation.
 
 ### 4. Strict Goal Threshold
-The goal threshold may be too tight for larger objects. In such cases, try setting the goal position at the edge of the object rather than its center of mass.
+The goal threshold may be too tight for larger objects. In such cases, try setting the goal position at the edge of the object rather than its center of mass or adjust the threshold accordingly.
