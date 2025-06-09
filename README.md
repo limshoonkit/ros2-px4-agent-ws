@@ -65,6 +65,8 @@ The goal threshold may be too tight for larger objects. In such cases, try setti
 
 ## Reviewer Comments
 
+![Comments](reviewer_comments.png)
+
 1. **Minimal details on ML method and training size for determining the correct words being used. Also in the integration with the drone, there is no data to support the successful integration and successful navigation using voice or language commands.**
    ```
    In response to the first comment regarding the "minimal details on the ML method and training size for determining the correct words being used,"
