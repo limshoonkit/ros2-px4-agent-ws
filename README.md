@@ -67,13 +67,24 @@ The goal threshold may be too tight for larger objects. In such cases, try setti
 
 1. **Minimal details on ML method and training size for determining the correct words being used. Also in the integration with the drone, there is no data to support the successful integration and successful navigation using voice or language commands.**
    ```
-   In response to the first comment regarding the "minimal details on the ML method and training size for determining the correct words being used," the authors wish to clarify that the approach relies on pre-trained, open-source large language models (LLMs) and vision-language models (VLMs),   rather than training new models from scratch. The paper clearly states its goal is to "democratize natural language control of autonomous drones" by integrating PX4 flight control, ROS 2 middleware, and locally hosted models via Ollama. Additionally, the authors would like to note that ongoing work aims to distill a lightweight VLM as part of future developments.
+   In response to the first comment regarding the "minimal details on the ML method and training size for determining the correct words being used,"
+   the authors wish to clarify that the approach relies on pre-trained, open-source large language models (LLMs) and vision-language models (VLMs), rather than training new models from scratch.
+   The paper clearly states its goal is to "democratize natural language control of autonomous drones" by integrating PX4 flight control, ROS 2 middleware, and locally hosted models via Ollama.
+   Additionally, the authors would like to note that ongoing work aims to distill a lightweight VLA as part of future developments.
 
-   In response to the second comment, the authors would like to clarify that the paper specifically refers to textual messages as the primary input. While support for voice commands is available, speech-to-text conversion using the OpenAI Whisper model can introduce errors due to the nuances of human speech. The authors also wish to highlight that a live flight demonstration utilizing speech commands was recently showcased as part of the SAFMC 2025 challenge using the complete speech-based setup.
+   In response to the second comment, the authors would like to clarify that the paper specifically refers to textual messages as the primary input.
+   While support for voice commands is available, speech-to-text conversion using the OpenAI Whisper model can introduce errors due to the nuances of human speech.
+   The authors also wish to highlight that a live flight demonstration utilizing speech commands was recently showcased as part of the SAFMC 2025 challenge using a speech-based setup.
    ```
+   
 2. **Why the success rate is so low with DeepSeek? Also, is it possible to plot trajectories resulting from the drone agent commands to the flight control algorithms?**
    ```
-   In response to the first query regarding "Why the success rate is so low with DeepSeek?," the authors would like to clarify that the evaluation was conducted using the DeepSeek-LLM model, not the more recently publicized DeepSeek-R1 model, which was unavailable at the time of testing. The authors also emphasize that the low success rate is addressed in the text: "Additionally, the DeepSeek model keeps producing erratic or reasoning-based responses, hence producing invalid commands even though system-level prompting required it to only generate responses in two formats: 'Move' and 'Turn'."
+   In response to the first query regarding "Why the success rate is so low with DeepSeek?,"
+   the authors would like to clarify that the evaluation was conducted using the DeepSeek-LLM model, not the more recently publicized DeepSeek-R1 model, which was unavailable at the time of testing.
+   The authors also emphasize that the low success rate is addressed in the text: "Additionally, the DeepSeek model keeps producing erratic or reasoning-based responses,
+   hence producing invalid commands even though system-level prompting required it to only generate responses in two formats: 'Move' and 'Turn'."
 
-   In response to the second query, the authors thank the reviewer for the valuable suggestion. It is indeed feasible to plot the generated trajectory and compare it with the actual output from the flight controller. The natural language commands result in discrete "Move" and "Turn" actions, which can be sequentially chained to form a complete trajectory from start to finish.
+   In response to the second query, the authors thank the reviewer for the valuable suggestion.
+   It is indeed feasible to plot the generated trajectory and compare it with the actual output from the flight controller.
+   The natural language commands result in discrete "Move" and "Turn" actions, which can be sequentially chained to form a complete trajectory from start to finish.
    ```
